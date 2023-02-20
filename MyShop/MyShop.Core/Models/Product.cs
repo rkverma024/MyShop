@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace MyShop.Core.Models
+namespace MyShop.Core.Models 
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+       /* public string Id { get; set; }*/
 
         [DisplayName("Product Name")]
         [StringLength(20)]
@@ -32,10 +32,10 @@ namespace MyShop.Core.Models
         [DisplayName("Image")]
         public string Image { get; set; }
 
-        public Product()
+        /*public Product()
         {
             this.Id = Guid.NewGuid().ToString();
 
-        }
+        }*/
     }
 }

@@ -8,15 +8,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyShop.Core.Models
 {
-   public class ProductCategory
+   public class ProductCategory : BaseEntity
     {
-        public string Id { get; set; }
+        /*public string Id { get; set; }*/
         public string Category { get; set; }
 
-        public ProductCategory()
+       /* public ProductCategory()
         {
             this.Id = Guid.NewGuid().ToString();
-        }
+        }*/
 
     }
 }
