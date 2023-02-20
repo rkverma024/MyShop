@@ -23,7 +23,7 @@ namespace MyShop.Core.Models
         public string Description { get; set; }
         [DisplayName("Price")]
         [Required]
-        [Range(0, 1500)]
+        [Range(0, 1000000)]
         public string Price { get; set; }
         [DisplayName("Category")]
         [Required]
