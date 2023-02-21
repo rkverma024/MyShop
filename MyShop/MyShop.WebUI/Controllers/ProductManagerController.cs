@@ -127,7 +127,7 @@ namespace MyShop.WebUI.Controllers
             {
                 return View(productToDelete);
             }
-            productCategories.Remove(productToDelete)
+            /*productCategories.Remove(productToDelete)*/
             
         }
 
@@ -143,7 +143,7 @@ namespace MyShop.WebUI.Controllers
             else
             {
                 context.Delete(Id);
-                context.Collection();
+                context.Commit();
                 return RedirectToAction("Index");   
             }
         }
