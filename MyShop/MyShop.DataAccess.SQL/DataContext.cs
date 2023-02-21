@@ -11,7 +11,7 @@ namespace MyShop.DataAccess.SQL
     public class DataContext : DbContext
     {
         public DataContext()
-            : base("DefaultConnection") { 
+            : base("MyShop") { 
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
