@@ -107,7 +107,7 @@ namespace MyShop.WebUI.Controllers
             else
             {
                 context.Delete(Id);
-                context.Collection();
+                context.Commit();
                 return RedirectToAction("Index");
             }
         }
