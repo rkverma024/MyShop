@@ -21,14 +21,17 @@ namespace MyShop.Core.Models
         [DisplayName("Description")]
         [Required]
         public string Description { get; set; }
+
         [DisplayName("Price")]
         [Required]
         [Range(0, 1000000)]
         public string Price { get; set; }
+
         [DisplayName("Category")]
         [Required]
         [StringLength(25)]
         public string Category { get; set; }
+
         [DisplayName("Image")]
         public string Image { get; set; }
 
