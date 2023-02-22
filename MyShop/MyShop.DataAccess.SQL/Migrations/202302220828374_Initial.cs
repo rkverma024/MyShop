@@ -24,7 +24,7 @@ namespace MyShop.DataAccess.SQL.Migrations
                         Id = c.String(nullable: false, maxLength: 128),
                         Name = c.String(nullable: false, maxLength: 20),
                         Description = c.String(nullable: false),
-                        Price = c.String(nullable: false),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Category = c.String(nullable: false, maxLength: 25),
                         Image = c.String(),
                         CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),

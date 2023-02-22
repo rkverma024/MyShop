@@ -25,7 +25,7 @@ namespace MyShop.Core.Models
         [DisplayName("Price")]
         [Required]
         [Range(0, 1000000)]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         [DisplayName("Category")]
         [Required]
