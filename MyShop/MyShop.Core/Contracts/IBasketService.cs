@@ -11,7 +11,7 @@ namespace MyShop.Core.Contracts
 {
     public interface IBasketService
     {
-        void AddToBaket(HttpContextBase httpContext, string productId);
+        void AddToBasket(HttpContextBase httpContext, string productId);
 
         void RemoveFromBasket(HttpContextBase httpContext, string itemId);
 

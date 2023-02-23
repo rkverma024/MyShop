@@ -31,6 +31,23 @@ namespace MyShop.DataAccess.SQL.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        UserId = c.String(),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        Email = c.String(),
+                        Street = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        ZipCode = c.String(),
+                        CreatedAt = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.ProductCategories",
                 c => new
                     {
@@ -62,6 +79,7 @@ namespace MyShop.DataAccess.SQL.Migrations
             DropIndex("dbo.BasketItems", new[] { "BasketId" });
             DropTable("dbo.Products");
             DropTable("dbo.ProductCategories");
+            DropTable("dbo.Customers");
             DropTable("dbo.Baskets");
             DropTable("dbo.BasketItems");
         }

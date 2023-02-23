@@ -26,7 +26,7 @@ namespace MyShop.WebUI.Controllers
 
         public ActionResult AddToBasket(string Id)
         {
-            basketService.AddToBaket(this.HttpContext, Id);
+            basketService.AddToBasket(this.HttpContext, Id);
 
             return RedirectToAction("Index");
         }
