@@ -1,15 +1,14 @@
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(MyShop.WebUI.StartupOwin))]
-
+[assembly: OwinStartupAttribute(typeof(MyShop.WebUI.Startup))]
 namespace MyShop.WebUI
 {
-    public partial class StartupOwin
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            //AuthStartup.ConfigureAuth(app);
+            ConfigureAuth(app);
         }
     }
 }

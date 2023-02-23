@@ -22,7 +22,7 @@ namespace MyShop.WebUI.Controllers
         }
 
 
-        public ActionResult Index(string Category=null )
+        public ActionResult Index(string Category = null)
         {
             List<Product> products;
             List<ProductCategory> categories = productCategories.Collection().ToList();
@@ -30,7 +30,7 @@ namespace MyShop.WebUI.Controllers
             {
                 products = context.Collection().ToList();
             }
-            else 
+            else
             {
                 products = context.Collection().Where(p => p.Category == Category).ToList();
             }
@@ -49,7 +49,7 @@ namespace MyShop.WebUI.Controllers
             {
                 return HttpNotFound();
             }
-            else 
+            else
             {
                 return View(product);
             }

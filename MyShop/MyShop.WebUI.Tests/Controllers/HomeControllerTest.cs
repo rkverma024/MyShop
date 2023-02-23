@@ -1,4 +1,4 @@
-﻿ using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyShop.WebUI;
 using MyShop.WebUI.Controllers;
 using System;
@@ -12,43 +12,43 @@ namespace MyShop.WebUI.Tests.Controllers
     [TestClass]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
-        {
-            // Arrange
-            //HomeController controller = new HomeController();
+        //[TestMethod]
+        //public void Index()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            //// Act
-            //ViewResult result = controller.Index() as ViewResult; 
+        //    // Act
+        //    ViewResult result = controller.Index() as ViewResult;
 
-            //// Assert
-            //Assert.IsNotNull(result);
-        }
-/*
-        [TestMethod]
-        public void About()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
+        //[TestMethod]
+        //public void About()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
+        //    // Act
+        //    ViewResult result = controller.About() as ViewResult;
 
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
+        //    // Assert
+        //    Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+        //}
 
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
+        //[TestMethod]
+        //public void Contact()
+        //{
+        //    // Arrange
+        //    HomeController controller = new HomeController();
 
-            // Assert
-            Assert.IsNotNull(result);
-        }*/
+        //    // Act
+        //    ViewResult result = controller.Contact() as ViewResult;
+
+        //    // Assert
+        //    Assert.IsNotNull(result);
+        //}
     }
 }
