@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyShop.WebUI.Models
@@ -79,9 +80,34 @@ namespace MyShop.WebUI.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [DisplayName("First Name")]        
+        [Required]
+        public string FirstName { get; set; }
+
+        [DisplayName("Last Name")]        
+        [Required]
+        public string LastName { get; set; }
+
+        [DisplayName("Street")]        
+        [Required]
+        public string Street { get; set; }
+
+        [DisplayName("City")]        
+        [Required]
+        public string City { get; set; }
+
+        [DisplayName("State")]        
+        [Required]
+        public string State { get; set; }
+
+        [DisplayName("ZipCode")]        
+        [Required]
+        public string ZipCode { get; set; }
     }
 
-    public class ResetPasswordViewModel
+      
+        public class ResetPasswordViewModel
     {
         [Required]
         [EmailAddress]
