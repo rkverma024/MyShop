@@ -79,6 +79,7 @@ namespace MyShop.WebUI.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    Session["FirstName"] = customerRepository.Collection().Where(b => b.Email == model.Email).Select(x => x.FirstName).FirstOrDefault();
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -89,6 +90,8 @@ namespace MyShop.WebUI.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+
+
         }
 
         //

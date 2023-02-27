@@ -1,4 +1,5 @@
-﻿using MyShop.Core.Contracts;
+﻿using MahApps.Metro.Controls.Dialogs;
+using MyShop.Core.Contracts;
 using MyShop.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,6 @@ namespace MyShop.WebUI.Controllers
         public ActionResult AddToBasket(string Id)
         {
             basketService.AddToBasket(this.HttpContext, Id);
-
             return RedirectToAction("Index");
         }
 
@@ -65,14 +65,34 @@ namespace MyShop.WebUI.Controllers
                     LastName = customer.LastName,
                     ZipCode = customer.ZipCode
                 };
-                return View(order);
+
+                while (basketService.GetBasketItems(this.HttpContext).Count != 0)
+                {
+                    return View(order);
+                }
+                return RedirectToAction("Index", "Home");
+               /* if (basketService.GetBasketItems(this.HttpContext).Count != 0)
+                {
+                    return View(order);
+                }
+                else
+                {
+                    
+                    ModelState.AddModelError("Key", "Cart is Empty..!");
+                    *//*return RedirectToAction("Empty_Cart", "Basket");
+                    return RedirectToAction("Index", "Home");*//*
+                }*/
+
             }
             else
             {
                 return RedirectToAction("Error");
             }
+        }
 
-
+        public ActionResult Empty_Cart()
+        {
+            return View();
         }
 
         [HttpPost]
